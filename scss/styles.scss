@@ -1,0 +1,60 @@
+body {
+    background-color: #28669f;
+    background-image: url("/tv_search/images/background.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+h1 {
+    -webkit-text-stroke: .3px white;
+    font-family: 'Chicle', cursive;
+    font-weight: 800;
+    font-size: 4em;
+    color: #ee7002;
+}
+
+#searchForm {
+    width: 350px;
+}
+
+#imageCont {
+    img {
+        max-height: 295px;
+    }
+}
+
+.card {
+    border-width: 0;
+    opacity: 0;
+    transform: scale(.1);
+}
+
+.card-body {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 210px;
+
+    p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+// // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    #body {
+        background-image: url("blank.png");
+    }
+}
+
+// // Small devices (landscape phones, less than 768px)
+// @media (max-width: 767.98px) { ... }
+
+// // Medium devices (tablets, less than 992px)
+// @media (max-width: 991.98px) { ... }
+
+// // Large devices (desktops, less than 1200px)
+// @media (max-width: 1199.98px) { ... }
