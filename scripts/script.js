@@ -42,8 +42,11 @@ const fetchImage = (shows) => {
         if(result.show.image){
             console.log(result);
 
+            const img_cont = document.createElement("div");
+            img_cont.classList.add("col");
+
             const img_card = document.createElement("div");
-            img_card.classList.add("card", "mb-4", "py-4", "box-shadow");
+            img_card.classList.add("card", "box-shadow");
 
             const img = document.createElement("img");
             img.src = result.show.image.medium;
@@ -54,9 +57,11 @@ const fetchImage = (shows) => {
 
             const img_txt = document.createElement("p");
             img_txt.classList.add("card-text");
+            img_txt.title = result.show.name
             img_txt.innerHTML = result.show.name
 
-            imageCont.append(img_card)
+            imageCont.append(img_cont)
+            img_cont.append(img_card)
             img_card.appendChild(img)
             img_card.appendChild(img_card_body)
             img_card_body.appendChild(img_txt)
